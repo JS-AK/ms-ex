@@ -23,15 +23,15 @@ export default class Service extends BaseService {
 	}
 
 	async refreshToken(data: { refreshToken: string; }): Promise<
-		Types.Common.TDataError<{ accessToken: ""; refreshToken: ""; }>
+		Types.Common.TDataError<{ accessToken: "1"; refreshToken: "1"; }>
 	> {
-		return { data: { accessToken: "", refreshToken: "" } };
+		return { data: { accessToken: "1", refreshToken: "1" } };
 	}
 
 	async signIn(data: { email: string; password: string; }): Promise<
-		Types.Common.TDataError<{ accessToken: ""; refreshToken: ""; }>
+		Types.Common.TDataError<{ accessToken: "1"; refreshToken: "1"; }>
 	> {
-		return { data: { accessToken: "", refreshToken: "" } };
+		return { data: { accessToken: "1", refreshToken: "1" } };
 	}
 
 	async processSystemPermissions(payload: { method: string; token?: string; }): Promise<

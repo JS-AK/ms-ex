@@ -7,11 +7,11 @@ export async function init(config: ConfigOptions) {
 
 	await sl.init();
 
-	const natsInstance = new Transport.Nats.Server({
+	const inwaveInstance = new Transport.Inwave.Server({
 		logger: sl.loggers.api,
-		mode: config.SERVER_MODE,
+		config: sl.config,
 		sl,
 	});
 
-	await natsInstance.listen();
+	await inwaveInstance.listen();
 }

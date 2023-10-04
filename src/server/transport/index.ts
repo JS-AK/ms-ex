@@ -1,1 +1,1 @@
-export * as Nats from "./nats/index.js";
+export * as Inwave from "./inwave/index.js";

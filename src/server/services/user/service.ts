@@ -1,4 +1,4 @@
-import { Protocols } from "@2people-IT/inwave-erp-types";
+import { Types as InwaveTypes } from "@2people-IT/inwave-ms-wrapper";
 
 import * as Types from "../../types/index.js";
 
@@ -9,11 +9,7 @@ export default class Service {
 		this.#logger = data.logger;
 	}
 
-	async getPermissionMatrix(
-		data: { id: string; },
-	): Promise<Types.Common.TDataError<
-		Protocols.HttpProtocol.User.GetPermissionMatrix.Result
-	>> {
+	async getPermissionMatrix(data: { userId: string; }) {
 		return { data: [] };
 	}
 }

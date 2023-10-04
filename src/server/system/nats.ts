@@ -13,7 +13,7 @@ export default class NatsJetStreamClient {
 	#responseCallbacks = new Map<string, (data: unknown) => void>();
 	#serverUrl;
 
-	defaultSubj = "mx-ex-cb.main";
+	defaultSubj = "permissions-provider-callback.main";
 
 	constructor(options: {
 		config: Types.Config.ConfigOptions;
@@ -64,8 +64,8 @@ export default class NatsJetStreamClient {
 			nc: connection,
 		};
 
-		const stream = "mx-ex-cb";
-		const subj = "mx-ex-cb.*";
+		const stream = "permissions-provider-callback";
+		const subj = "permissions-provider-callback.*";
 
 		await this.#nats.jsm.streams.add({ name: stream, subjects: [subj] });
 
